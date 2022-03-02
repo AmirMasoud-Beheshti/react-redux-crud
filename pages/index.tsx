@@ -1,17 +1,17 @@
-import Link from "next/link";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
+import AddUser from "../components/Form/AddUser";
+import UsersList from "../components/View/UsersList";
+import usersReducer from "../features/Users";
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    users:usersReducer,
+  },
 });
 const IndexPage = () => (
   <Provider store={store}>
-      <h1>Hello Next.js 👋</h1>
-      <p>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </p>
+    <AddUser />
+    <UsersList/>
   </Provider>
 );
 
