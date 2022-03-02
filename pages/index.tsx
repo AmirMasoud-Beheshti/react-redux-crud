@@ -1,15 +1,18 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
-
+import Link from "next/link";
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+const store = configureStore({
+  reducer: {},
+});
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+  <Provider store={store}>
+      <h1>Hello Next.js 👋</h1>
+      <p>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </p>
+  </Provider>
+);
 
-export default IndexPage
+export default IndexPage;

@@ -1,9 +1,8 @@
 import { User } from '../interfaces'
 
-/** Dummy user data. */
 export const sampleUserData: User[] = [
-  { id: 101, name: 'Alice' },
-  { id: 102, name: 'Bob' },
-  { id: 103, name: 'Caroline' },
-  { id: 104, name: 'Dave' },
+  { id: 101, name: 'Alice', username:'mamad' },
+  { id: 102, name: 'Bob', username:'mamad' },
+  { id: 103, name: 'Caroline', username:'mamad' },
+  { id: 104, name: 'Dave', username:'mamad' },
 ]
